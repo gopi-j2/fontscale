@@ -7,10 +7,18 @@
   <title>Font Scale</title>
   <style>
     html {
-      text-size-adjust: 150%;
-      -webkit-text-size-adjust: 150%;
-      -moz-text-size-adjust: 150%;
-      -ms-text-size-adjust: 150%;
+      text-size-adjust: 125%;
+      -webkit-text-size-adjust: 125%;
+      -moz-text-size-adjust: 125%;
+      -ms-text-size-adjust: 125%;
+    }
+
+    * {
+      font-size: 1.25rem;
+
+      @media screen and (max-width: 1280px) {
+        font-size: 1.125rem;
+      }
     }
   </style>
 </head>
