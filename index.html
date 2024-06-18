@@ -26,6 +26,64 @@
         </div>
       </div>
     </div>
+    <section id="firstPage" class="login-page">
+      <!-- add "login-success" class for success criteria  -->
+      <div class="success-content">
+        <i class="icon success"></i>
+        <h3>Login successful!</h3>
+      </div>
+      <form class="form-outline" id="request">
+        <label for="userName" required>CRN Number</label>
+        <input type="text" class="form-control" placeholder="Enter CRN Number" id="userName" aria-label="CRN number" aria-required="true">
+        <span class="status" id="status"></span>
+      </form>
+      <div class="container">
+        <div class="card-container">
+          <a href="javascript:void(0)" class="card" aria-label="Enroll User, Click to start enrolment for a new user" onclick="enrollCaptureUser($('#userName').val(),cb);">
+            <div class="icon-circle">
+              <i class="icon enroll-user"></i>
+            </div>
+            <div class="card-content">
+              <h2>Enroll User</h2>
+              <p id="startEnrollUser"></p>
+            </div>
+          </a>
+          <a href="javascript:void(0)" class="card" aria-label="Authenticate User, Click to start authentication for user" onclick="authenticateEnrolledUser($('#userName').val(),cb);">
+            <div class="icon-circle">
+              <i class="icon authenticate-user"></i>
+            </div>
+            <div class="card-content">
+              <h2>Authenticate User</h2>
+              <p id="startAuthenticationUser"></p>
+            </div>
+          </a>
+          <a href="javascript:void(0)" class="card" aria-label="Verification User, Click to start verification for user" onclick="verifyEnrolledUser($('#userName').val(),'customId',cb);">
+            <div class="icon-circle">
+              <i class="icon verification-user"></i>
+            </div>
+            <div class="card-content">
+              <h2>Verification </h2>
+              <p id="startVerification"></p>
+            </div>
+          </a>
+        </div>
+        <div class="json-response">
+          <div class="json-header">
+            <h2>JSON Response code</h2>
+            <div class="toggle">
+              <span>Hide</span>
+              <input type="checkbox" name="toggle" role="option" id="responseToggle" tabindex="-1" checked>
+              <label for="responseToggle" id="responseSwitch" tabindex="0" role="switch" aria-label=""></label>
+              <span data-bs-toggle-on="Show" data-bs-toggle-off="Hide">Show</span>
+            </div>
+          </div>
+          <div class="json-message">
+            <div class="json-text" id="response" tabindex="0" aria-describedby="response"></div>
+          </div>
+        </div>
+      </div>
+      <button type="button" id="logoutBtn" class="btn btn-primary mt-4 logout-btn" aria-label="button, Logout">Logout</button>
+    </section>
   </section>
 </body>
 </html>
