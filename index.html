@@ -6,20 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Font Scale</title>
   <style>
+    body>* {
+      font-size: 1.5rem;
+
+      @media screen and (max-width: 1280px) {
+        font-size: 1rem;
+      }
+    }
+
     @media screen and (max-width: 1280px) {
       html {
         text-size-adjust: 125%;
         -webkit-text-size-adjust: 125%;
         -moz-text-size-adjust: 125%;
         -ms-text-size-adjust: 125%;
-      }
-    }
-
-    body>* {
-      font-size: 1.5rem;
-
-      @media screen and (max-width: 1280px) {
-        font-size: 1rem;
       }
     }
   </style>
