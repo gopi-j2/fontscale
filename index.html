@@ -83,9 +83,9 @@
   </section>
   <script>
     function onFontSizeChange() {
-      const detector = document.querySelector('html')
+      const detector = document.querySelector('body')
       const resizeObserver = new ResizeObserver(() => {
-        const fontSize = window.getComputedStyle(detector).fontSize
+        const fontSize = window.getComputedStyle(detector).getPropertyValue('font-size')
         const fsElement = document.getElementById('fontSize')
         fsElement.innerHTML = fontSize
       })
