@@ -10,13 +10,16 @@
       font-size: 1rem;
     }
 
-    p {
+    .para {
       visibility: hidden;
+      position: fixed;
+      width: 0;
+      height: 0;
     }
   </style>
 </head>
 <body aria-live="polite" aria-atomic="true">
-  <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit incidunt voluptates laboriosam veniam possimus? Soluta ipsam rerum officiis placeat odit.</p>
+  <p id="para" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit incidunt voluptates laboriosam veniam possimus? Soluta ipsam rerum officiis placeat odit.</p>
   <section>
     <div>
       <strong>Font Size:</strong>
@@ -96,7 +99,7 @@
       return window.getComputedStyle(ele).getPropertyValue('font-size')
     }
     function onFontSizeChange() {
-      const detector = document.body
+      const detector = document.getElementById('para')
       const resizeObserver = new ResizeObserver(() => {
         const fontSize = getFontSize(detector)
         const fsElement = document.getElementById('fontSize')
