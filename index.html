@@ -9,10 +9,14 @@
     body {
       font-size: 1rem;
     }
+
+    p {
+      display: none;
+    }
   </style>
 </head>
 <body aria-live="polite" aria-atomic="true">
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit incidunt voluptates laboriosam veniam possimus? Soluta ipsam rerum officiis placeat odit.</p>
+  <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit incidunt voluptates laboriosam veniam possimus? Soluta ipsam rerum officiis placeat odit.</p>
   <section>
     <div>
       <strong>Font Size:</strong>
@@ -89,7 +93,7 @@
   </section>
   <script>
     function onFontSizeChange() {
-      const detector = document.querySelector('body')
+      const detector = document.querySelector('#para')
       const resizeObserver = new ResizeObserver(() => {
         const fontSize = window.getComputedStyle(detector).getPropertyValue('font-size')
         const fsElement = document.getElementById('fontSize')
