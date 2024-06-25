@@ -14,19 +14,14 @@
         font-size: clamp(1rem, 0.9167rem + 0.4167vw, 1.25rem);
       }
     }
-
-    @media screen and (max-width: 1280px) {
-      html {
-        text-size-adjust: 150%;
-        -webkit-text-size-adjust: 150%;
-        -moz-text-size-adjust: 150%;
-        -ms-text-size-adjust: 150%;
-      }
-    }
   </style>
 </head>
 <body aria-live="polite" aria-atomic="true">
   <section>
+    <div>
+      <strong>Font Size:</strong>
+      <span id="fontSize"></span>
+    </div>
     <div class="logo-container header">
       <i class="icon logo-img"></i>
       <div class="dropdown help-dropdown">
@@ -96,5 +91,20 @@
       <button type="button" id="logoutBtn" class="btn btn-primary mt-4 logout-btn" aria-label="button, Logout">Logout</button>
     </section>
   </section>
+  <script>
+    function onFontSizeChange() {
+      const detector = document.querySelector('html')
+      const resizeObserver = new ResizeObserver(() => {
+        const fontSize = window.getComputedStyle(detector).fontSize
+        const fsElement = document.getElementById('fontSize')
+        fsElement.innerHTML = fontSize
+      })
+
+      resizeObserver.observe(detector)
+    }
+
+    document.addEventListener('DOMContentLoaded', onFontSizeChange());
+
+  </script>
 </body>
 </html>
