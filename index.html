@@ -11,7 +11,7 @@
     }
 
     p {
-      display: none;
+      visibility: hidden;
     }
   </style>
 </head>
@@ -92,32 +92,22 @@
     </section>
   </section>
   <script>
-    // function getFontSize() {
-    //   const detector = document.body
-
-    //   return window.getComputedStyle(detector).getPropertyValue('font-size')
-    // }
-    /* function onFontSizeChange() {
+    function getFontSize(ele) {
+      return window.getComputedStyle(ele).getPropertyValue('font-size')
+    }
+    function onFontSizeChange() {
+      const detector = document.body
       const resizeObserver = new ResizeObserver(() => {
+        const fontSize = getFontSize(detector)
         const fsElement = document.getElementById('fontSize')
         fsElement.innerHTML = fontSize
       })
 
       resizeObserver.observe(detector)
-    } */
-
-    function setFontSize() {
-      const detector = document.body
-      const rootElement = document.documentElement
-      const fontSize = window.getComputedStyle(detector).getPropertyValue('font-size')
-      rootElement.style.fontSize = fontSize
-      console.log(rootElement.style.fontSize)
     }
 
-    document.addEventListener('DOMContentLoaded', setFontSize)
 
-    setInterval(setFontSize, 1000);
-
+    document.addEventListener('DOMContentLoaded', onFontSizeChange);
   </script>
 </body>
 </html>
