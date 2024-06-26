@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Font Scale</title>
   <style>
-    html * {
-      max-height: 100000px;
+    a {
+      position: absolute;
     }
   </style>
 </head>
@@ -92,7 +92,7 @@
       return window.getComputedStyle(ele).getPropertyValue('font-size')
     }
     function onFontSizeChange() {
-      const detector = document.getElementById('para')
+      const detector = document.querySelector('html')
       const resizeObserver = new ResizeObserver(() => {
         const fontSize = getFontSize(detector)
         const fsElement = document.getElementById('fontSize')
