@@ -5,13 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Font Scale</title>
-  <style>
-    a {
-      position: absolute;
-      width: max-content;
-      height: fit-content;
-    }
-  </style>
 </head>
 <body aria-live="polite" aria-atomic="true">
   <section>
@@ -94,10 +87,13 @@
     }
     function onFontSizeChange() {
       const detector = document.querySelector('html')
+
       const resizeObserver = new ResizeObserver(() => {
-        const fontSize = getFontSize(detector)
+        const fontSize = getFontSize(detector),
+          visualScale = window.visualViewport.scale
+
         const fsElement = document.getElementById('fontSize')
-        fsElement.innerHTML = fontSize
+        fsElement.innerHTML = visualScale
       })
 
       resizeObserver.observe(detector)
