@@ -12,6 +12,10 @@
       <strong>Font Size:</strong>
       <span id="fontSize"></span>
     </div>
+    <div>
+      <strong>Device Pixel Ratio:</strong>
+      <span id="pixelRatio"></span>
+    </div>
     <div class="logo-container header">
       <i class="icon logo-img"></i>
       <div class="dropdown help-dropdown">
@@ -81,26 +85,6 @@
       <button type="button" id="logoutBtn" class="btn btn-primary mt-4 logout-btn" aria-label="button, Logout">Logout</button>
     </section>
   </section>
-  <script>
-    function getFontSize(ele) {
-      return window.getComputedStyle(ele).getPropertyValue('font-size')
-    }
-    function onFontSizeChange() {
-      const detector = document.querySelector('html')
-
-      const resizeObserver = new ResizeObserver(() => {
-        const fontSize = getFontSize(detector),
-          visualScale = window.visualViewport.scale
-
-        const fsElement = document.getElementById('fontSize')
-        fsElement.innerHTML = visualScale
-      })
-
-      resizeObserver.observe(detector)
-    }
-
-
-    document.addEventListener('DOMContentLoaded', onFontSizeChange);
-  </script>
+  <script src="js/index.js"></script>
 </body>
 </html>
