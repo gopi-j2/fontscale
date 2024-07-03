@@ -4,37 +4,22 @@ window.addEventListener('DOMContentLoaded', () => {
 
 const detector = document.querySelector('html');
 const fsElement = document.getElementById('fontSize');
+const hiddenElement = document.querySelector('[data-hidden-element]');
 
 function getFontSize(ele) {
   return window.getComputedStyle(ele).getPropertyValue('font-size')
 }
 
+function getElementHeight(ele) {
+  return ele.offsetHeight;
+}
 function onFontSizeChange() {
   const { scale } = window.visualViewport,
-    fontSize = getFontSize(detector);
+    fontSize = getFontSize(detector),
+    elementHeight = getElementHeight(hiddenElement);
 
-  fsElement.textContent = fontSize;
+  fsElement.textContent = elementHeight;
 }
 
 const resizeObserver = new ResizeObserver(onFontSizeChange);
-resizeObserver.observe(detector);
-
-
-let remove = null;
-const output = document.querySelector("#pixelRatio");
-
-const updatePixelRatio = () => {
-  if (remove != null) {
-    remove();
-  }
-  const mqString = `(resolution: ${window.devicePixelRatio}dppx)`;
-  const media = matchMedia(mqString);
-  media.addEventListener("change", updatePixelRatio);
-  remove = () => {
-    media.removeEventListener("change", updatePixelRatio);
-  };
-
-  output.textContent = `devicePixelRatio: ${window.devicePixelRatio}`;
-};
-
-updatePixelRatio();
+resizeObserver.observe(hiddenElement);
