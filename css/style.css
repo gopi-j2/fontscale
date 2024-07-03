@@ -5,5 +5,7 @@
 }
 [data-hidden-element] {
   line-height: 1;
-  display: inline-block;
+  display: table-cell;
+  position: absolute;
+  pointer-events: none;
 }
