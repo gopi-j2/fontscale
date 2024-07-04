@@ -11,7 +11,5 @@ body > *{
 }
 [data-hidden-element] {
   line-height: 1;
-  display: table-cell;
-  position: absolute;
-  pointer-events: none;
+  display: block;
 }
