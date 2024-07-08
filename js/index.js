@@ -1,5 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
   onFontSizeChange();
+  getTextScalePercentage();
 })
 
 const detector = document.querySelector('html');
@@ -23,3 +24,14 @@ function onFontSizeChange() {
 
 const resizeObserver = new ResizeObserver(onFontSizeChange);
 resizeObserver.observe(hiddenElement);
+
+async function getTextScalePercentage() {
+  try {
+    const accessibility = await navigator.permissions.query({ name: 'textAutosizing' });
+
+    fsElement.textContent = accessibility.state;
+    console.log('Text autosizing permission state:', accessibility.state);
+  } catch (error) {
+    console.error('Error querying textAutosizing permission:', error);
+  }
+}
