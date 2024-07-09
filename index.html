@@ -3,30 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Web App</title>
+  <title>Verify Element Font Size</title>
   <style>
-    body {
-      font-size: 1em;
-      line-height: 1.6;
-      font-family: Arial, sans-serif;
+    :root {
+      font-size: 100%;
     }
 
-    @media screen and (max-width: 768px) {
-      body {
-        font-size: 0.9em;
-      }
+    body {
+      font-size: 1rem;
+      line-height: 1.6;
+      padding: 1rem;
+      transition: font-size 0.3s ease;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Your Web App</h1>
-  </header>
-  <main>
-    <p>This is a paragraph of text in your web app.</p>
-  </main>
-  <footer>
-    <p>&copy; 2024 Your Company</p>
-  </footer>
+  <h1>Verify Element Font Size</h1>
+  <p>This text should adjust according to your preferred reading size and other accessibility settings.</p>
+  <p id="font-size-display"></p>
+  <script>
+    // Function to get and display the font size of an element
+    function displayElementFontSize(element) {
+      // Get the computed font size of the specified element
+      const fontSize = getComputedStyle(element).fontSize
+
+      // Display the font size in the paragraph
+      const fontSizeDisplay = document.getElementById('font-size-display')
+      fontSizeDisplay.textContent = `Font size of <${element.tagName.toLowerCase()}> element: ${fontSize}`
+    }
+
+    // Run the displayElementFontSize function on page load
+    window.onload = () => {
+      const element = document.querySelector('h1') // Specify the element you want to check
+      displayElementFontSize(element)
+    };
+  </script>
 </body>
 </html>
