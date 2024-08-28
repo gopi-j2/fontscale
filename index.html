@@ -11,22 +11,29 @@
 <body>
   <main>
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cancelVerification">Close Scan</button>
-    <div class="modal fade" id="cancelVerification" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="cancelVerificationLabel" aria-hidden="true">
-      <div class="modal-dialog custom-modal modal-dialog-centered modal-md">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> Launch static backdrop modal </button>
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true" aria-label="Confirmation modal">
+      <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-body">
-            <span class="icon alert-icon"></span>
-            <p id="cancelVerificationLabel" class="cancel-message">Are you sure you want to cancel Verification ?</p>
+          <div class="modal-header">
+            <span class="modal-title fs-5" id="staticBackdropLabel" tabindex="0">Are you sure you want to cancel Verification ?</span>
           </div>
-          <div class="modal-footer flex-row-reverse">
-            <button type="button" id="no" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-            <button type="button" id="yes" class="btn btn-primary ms-3">Yes</button>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Understood</button>
           </div>
         </div>
       </div>
     </div>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script>
+    const dialog = document.getElementById('staticBackdrop')
+
+    dialog.addEventListener('shown.bs.modal', (event) => {
+      document.getElementById('staticBackdropLabel').focus()
+    });
+  </script>
 </body>
 </html>
