@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>UIP Registration | Logistics Details</title>
+  <link rel="stylesheet" href="_global/xlib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="_global/xlib/unisys/unisys-style.min.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/app-style.css">
+  <link rel="stylesheet" href="css/uipStyle.css">
+  <link rel="shortcut icon" href="_global/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <main class="d-grid">
+    <!-- Header -->
+    <header class="header h-auto d-flex bg-white">
+      <h1 class="logo fs-0 m-0">Unisys Innovation Program</h1>
+    </header>
+    <article class="content d-grid user__details position-relative">
+      <button type="button" class="btn__wrap position-absolute" id="btnBack">
+        <i class="icon back"></i>
+      </button>
+      <header class="content__header d-flex flex-column gap-2 justify-content-center">
+        <h2 class="content__title">Logistics Details</h2>
+        <strong class="content__description">Information for security and accessibility</strong>
+      </header>
+      <img src="css/images/icons/logistics_details.svg" alt="Logistics Details" class="img-fluid content__thumbnail">
+      <form class="pd__form form-outline d-grid" autocomplete="off">
+        <div class="col fieldset">
+          <label for="laptopSerial">Laptop Serial Number (if applicable)</label>
+          <input type="text" name="laptopSerial" id="laptopSerial" class="form-control" placeholder="Enter serial number">
+        </div>
+        <div class="col fieldset">
+          <label for="vehicleRegistration">Vehicle Registration Number (if applicable)</label>
+          <input type="text" name="vehicleRegistration" id="vehicleRegistration" class="form-control" placeholder="e.g.KA03AG1234">
+        </div>
+      </form>
+    </article>
+    <!-- Footer -->
+    <footer class="d-flex justify-content-between align-items-center px-4">
+      <button type="button" class="btn btn-secondary" id="btnCancel">Cancel</button>
+      <button type="button" class="btn btn-primary m-0" id="btnSubmit">Next</button>
+    </footer>
+  </main>
+</body>
+</html>

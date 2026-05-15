@@ -1,0 +1,353 @@
+/*
+* fs: Font Size
+* lh: Line Height
+* p: Padding
+* i: Icon
+*/
+
+:root{
+  /* Vendor changes ================ */
+  --bs-primary          : var(--blue-700);
+  --bs-primary-rgb      : 22, 89, 177;
+  --bs-primary-hover    : var(--blue-500);
+  --bs-primary-hover-rgb: 31, 115, 224;
+  --bs-success          : var(--green-500);
+  --bs-success-rgb      : 45, 134, 68;
+  --bs-warning          : var(--orange-500);
+  --bs-warning-rgb      : 239, 112, 21;
+  --bs-danger           : var(--red-700);
+  --bs-danger-rgb       : 205, 21, 67;
+  --bs-dark             : var(--grey-13);
+  --bs-dark-rgb         : 33, 33, 33;
+  --bs-light            : var(--grey-44);
+  --bs-light-rgb        : 112, 112, 112;
+  --bs-light-bg-subtle  : #f1f6f9;
+  --bs-tooltip-bg        : var(--inverted-bg);
+
+  --primary: var(--blue-700);
+  --secondary: var(--blue-500);
+
+  /* Header, Metroline, Footer Height/Width ================ */
+  --header                     : 7.625rem;
+  --metroline-width            : 30rem;
+  --metroline-icon-width       : 3.5rem;
+  --metroline-icon-active-width: 3.75rem;
+  --metro-top   :4.5rem;
+  /* Font families */
+  --ff-regular : 'Regular','OSRegular';
+  --ff-medium  : 'Medium','OSSemiBold';
+  --ff-bold    : 'Bold','OSBold';
+
+  /* Large Screen Font Sizes ================ */
+  --fs-12: .75rem;
+  --fs-14: .875rem;
+  --fs-16: 1rem;
+  --fs-18: 1.125rem;
+  --fs-20: 1.25rem;
+  --fs-22: 1.375rem;
+  --fs-24: 1.5rem;
+  --fs-32: 2rem;
+
+  /* Btn & line-height ================ */
+  --btn-lg : 3.25rem;
+  --btn-md : 2.5rem;
+  --btn-sm : 2rem;
+  --input-h: 3rem;
+  --lh     : 1.5;
+
+  /* Icon Sizes ================ */
+  --i-12: .75rem;
+  --i-14: .875rem;
+  --i-16: 1rem;
+  --i-18: 1.125rem;
+  --i-20: 1.25rem;
+  --i-24: 1.5rem;
+  --i-28: 1.75rem;
+  --i-32: 2rem;
+  --i-40: 2.5rem;
+  --i-48:3rem;
+  --i-60: 3.75rem;
+  --i-64: 4rem;
+  --i-80: 5rem;
+
+  /* Padding and Margins ================ */
+  --my-40: 2.5rem;
+  --px-14: .875rem;
+  --px-24: 1.5rem;
+  --px-40: 2.5rem;
+
+  /* Confirm Modal Width ================ */
+  --confirm-modal-w: 37.5rem;
+  --confirm-modal-p: 2.5rem;
+  --confirm-modal-gutter: var(--px-24);
+
+  /* Toggle switch Height and Width ================ */
+  --tg-h: 1.375rem;
+  --tg-w: 2.5rem;
+  --tga-h: 1.125rem;
+  --tga-w: 1.125rem;
+
+  /* Card container Height and Width ==================*/
+  --cc-h:20.125rem;
+  --cc-w: 26.6875rem;
+  --ic-h:150px;
+  --ic-w:150px;
+}
+
+/* Medium(1600 resolution) Screen ================================================================ */
+@media screen and (max-width: 1680px){
+  :root[theme=light], :root {
+    --logo-dimensions: 18rem 2.5rem;
+
+    /* Header, Metroline, Footer Height/Width ================ */
+    --header                     : 6.25rem;
+    --metroline-width            : 28rem;
+    --metroline-icon-width       : 2.875rem;
+    --metroline-icon-active-width: 3.125rem;
+    --metro-top: 4.375rem;
+    /* Font Sizes ================ */
+    --fs-16: .875rem;
+    --fs-18: 1rem;
+    --fs-20: 1.125rem;
+    --fs-22: 1.25rem;
+    --fs-24: 1.375rem;
+    --fs-32: 1.875rem;
+
+    /* Btn & line-height ================ */
+    --btn-lg : 3rem;
+    --btn-md : 2.25rem;
+    --btn-sm : 1.75rem;
+    --input-h: 2.5rem;
+
+    /* Icon Sizes ================ */
+    --i-14: .75rem;
+    --i-16: .875rem;
+    --i-18: 1rem;
+    --i-20: 1.125rem;
+    --i-24: 1.25rem;
+    --i-28: 1.5rem;
+    --i-32: 1.75rem;
+    --i-40: 2.25rem;
+    --i-60: 3.125rem;
+    --i-80: 4.5rem;
+
+    /* Padding and Margins ================ */
+    --px-24: 1.25rem;
+    --px-14: .75rem;
+
+    /* Confirm Modal Width ================ */
+    --confirm-modal-w: 34.75rem;
+    --confirm-modal-p: 2rem;
+
+    /* Toggle switch Height and Width ================ */
+    --tg-h: 1.25rem;
+    --tg-w: 2.25rem;
+    --tga-h: 1rem;
+    --tga-w: 1rem;
+
+    /* Card container Height and Width ==================*/
+    --cc-h:17.1875rem;
+    --cc-w:21.875rem;
+    --ic-h:8.0625rem;
+    --ic-w:8.0625rem;
+  }
+}
+
+/* Small(1366 resolution) Screen ================================================================ */
+@media screen and (max-width: 90rem) {
+  :root[theme=light], :root {
+    --logo-dimensions: 16rem 2rem;
+    --header                     : 5.625rem;
+    --metro-top: 4rem;
+    /* Header, Metroline, Footer Height/Width ================ */
+    --metroline-width            : 27.625rem;
+    --metroline-icon-width       : 2.5rem;
+    --metroline-icon-active-width: 2.75rem;
+
+    /* Font Sizes ================ */
+    --fs-14: .75rem;
+    --fs-16: .75rem;
+    --fs-18: .875rem;
+    --fs-20: .875rem;
+    --fs-22: 1rem;
+    --fs-24: 1.125rem;
+    --fs-32: 1.625rem;
+
+    /* Btn & line-height ================ */
+    --btn-lg : 2.75rem;
+    --btn-md : 2rem;
+    --btn-sm : 1.5rem;
+
+    /* Icon Sizes ================ */
+    --i-14: .625rem;
+    --i-16: .75rem;
+    --i-20: 1rem;
+    --i-18: .875rem;
+    --i-24: 1.125rem;
+    --i-32: 1.5rem;
+    --i-40: 2rem;
+    --i-60: 2.5rem;
+    --i-80: 4rem;
+
+    /* Padding and Margins ================ */
+    --px-24: 1rem;
+
+    /* Confirm Modal Width ================ */
+    --confirm-modal-w: 27.25rem;
+    --confirm-modal-p: 1.5rem;
+
+    /* Toggle switch Height and Width ================ */
+    --tg-h: 1.125rem;
+    --tg-w: 2rem;
+    --tga-h: 0.875rem;
+    --tga-w: 0.875rem;
+
+    /* Card container Height and Width ==================*/
+    --cc-h: 14.875rem;
+    --cc-w: 19.75rem;
+    --ic-h:6.625rem;
+    --ic-w:6.625rem;
+  }
+}
+
+/* Tablet(1366 resolution) Screen ================================================================ */
+@media screen and (max-width: 75rem) {
+  :root[theme=light], :root {
+    --logo-dimensions: 18rem 2.5rem;
+
+    /* Header, Metroline, Footer Height/Width ================ */
+    --header                     : 6.25rem;
+    --metroline-width            : 28rem;
+    --metroline-icon-width       : 2.875rem;
+    --metroline-icon-active-width: 3.125rem;
+    --metro-top: 5rem;
+    /* Font Sizes ================ */
+    --fs-16: .875rem;
+    --fs-18: 1rem;
+    --fs-20: 1.125rem;
+    --fs-22: 1.25rem;
+    --fs-24: 1.375rem;
+    --fs-32: 1.875rem;
+
+    /* Btn & line-height ================ */
+    --btn-lg : 3rem;
+    --btn-md : 2.25rem;
+    --btn-sm : 1.75rem;
+    --input-h: 2.5rem;
+
+    /* Icon Sizes ================ */
+    --i-14: .75rem;
+    --i-16: .875rem;
+    --i-18: 1rem;
+    --i-20: .875rem;
+    --i-24: 1.25rem;
+    --i-28: 1.5rem;
+    --i-32: 1.75rem;
+    --i-40: 2.25rem;
+    --i-60: 3.125rem;
+    --i-80: 3.5rem;
+
+    /* Padding and Margins ================ */
+    --px-24: 1.25rem;
+    --px-14: .75rem;
+
+    /* Confirm Modal Width ================ */
+    --confirm-modal-w: 34.75rem;
+    --confirm-modal-p: 2rem;
+
+    /* Toggle switch Height and Width ================ */
+    --tg-h: 1.25rem;
+    --tg-w: 2.25rem;
+    --tga-h: 1rem;
+    --tga-w: 1rem;
+
+    /* Card container Height and Width ==================*/
+    --cc-h:19.125rem;
+    --cc-w: 21.875rem;
+    --ic-h:9.0625rem;
+    --ic-w:9.0625rem;
+  }
+}
+
+/* Tablet(1366 resolution) Screen ================================================================ */
+@media screen and (max-width: 75rem) {
+  :root[theme=light], :root {
+    --logo-dimensions: 9rem;
+
+    /* Header, Metroline, Footer Height/Width ================ */
+    --header: 100px;
+
+    /* Header, Metroline, Footer Height/Width ================ */
+    --metroline-width            : 27.625rem;
+    --metroline-icon-width       : 2.5rem;
+    --metroline-icon-active-width: 2.75rem;
+
+    /* Font Sizes ================ */
+    --fs-14: .75rem;
+    --fs-16: .75rem;
+    --fs-18: .875rem;
+    --fs-20: .875rem;
+    --fs-22: 1rem;
+    --fs-24: 1.125rem;
+    --fs-32: 1.625rem;
+  }
+}
+
+/* Mobile(375 resolution) Screen ================================================================ */
+@media screen and (max-width: 48.75rem){
+  :root[theme=light], :root {
+    /* Font Sizes ================ */
+    --fs-24: 1.125rem;
+    --fs-18: .875rem;
+    --fs-20: 1rem;
+    /* Card container Height and Width ==================*/
+    --input-h: 2rem;
+    --i-80: 3rem;
+    --cc-h:13.625rem;
+    --cc-w:21.5rem;
+    --ic-h:80px;
+    --ic-w:80px;
+  }
+
+}
+@media screen and (max-width: 770px) and (max-height: 1024px) {
+  :root[theme=light], :root {
+    --i-80:4.0625rem;
+    --cc-h:19.25rem;
+    --cc-w:21.5rem;
+    --ic-h:9.375rem;
+    --ic-w:9.375rem;
+
+  }
+}
+
+@media screen and (max-width: 47.5rem){
+  :root[theme=light], :root {
+    /* Font Sizes ================ */
+    --input-h: 2rem;
+    --fs-24: 1rem;
+    --fs-18: 0.75rem;
+    --fs-20: 0.875rem;
+    /* Card container Height and Width ==================*/
+    --i-80:2.375rem;
+    --cc-h:6.875rem;
+    --cc-w:calc(100% - 20px);
+    --ic-h:3.75rem;
+    --ic-w:3.75rem;
+  }
+}
+@media screen and (max-width:22.5rem){
+  :root[theme=light], :root {
+    /* Font Sizes ================ */
+    --input-h: 2rem;
+    --fs-24: 1rem;
+    --fs-18: 0.75rem;
+    --fs-20: 0.875rem;
+    /* Card container Height and Width ==================*/
+    --i-80:28px;
+    --cc-h:5.625rem;
+    --cc-w:18.75rem;
+    --ic-h:52px;
+    --ic-w:52px;
+  }
+}

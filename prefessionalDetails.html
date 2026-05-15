@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>UIP Registration | Professional Details</title>
+  <link rel="stylesheet" href="_global/xlib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="_global/xlib/unisys/unisys-style.min.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/app-style.css">
+  <link rel="stylesheet" href="css/uipStyle.css">
+  <link rel="shortcut icon" href="_global/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <main class="d-grid">
+    <!-- Header -->
+    <header class="header h-auto d-flex bg-white">
+      <h1 class="logo fs-0 m-0">Unisys Innovation Program</h1>
+    </header>
+    <article class="content d-grid user__details position-relative">
+      <button type="button" class="btn__wrap position-absolute" id="btnBack">
+        <i class="icon back"></i>
+      </button>
+      <header class="content__header d-flex flex-column gap-2 justify-content-center">
+        <h2 class="content__title">Professional Details</h2>
+        <strong class="content__description">Please Provide your organization details</strong>
+      </header>
+      <img src="css/images/icons/professional_details.svg" alt="Professional Details" class="img-fluid content__thumbnail">
+      <form class="pd__form form-outline d-grid" autocomplete="off">
+        <div class="col fieldset">
+          <label for="category">Category</label>
+          <select name="category" id="category" class="form-select">
+            <option value="select" selected>Select</option>
+            <option value="student">Student</option>
+            <option value="professional">Professional</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="col fieldset">
+          <label for="organization">Company / Organization / University</label>
+          <input type="text" name="organization" id="organization" class="form-control" placeholder="Enter Company / Organization / University">
+        </div>
+        <div class="col fieldset">
+          <label for="designation">Designation</label>
+          <input type="text" name="designation" id="designation" class="form-control" placeholder="Enter designation">
+        </div>
+        <div class="col fieldset">
+          <label for="isFirstTime">Have you been to a UIP event before?</label>
+          <div class="d-flex align-items-center gap-3">
+            <div class="d-inline-flex flex-grow-1">
+              <input type="radio" class="btn-check" name="isFirstTime" id="yesFirstTime" autocomplete="off">
+              <label class="btn btn__radio m-0 w-100" for="yesFirstTime">Yes</label>
+            </div>
+            <div class="d-inline-flex flex-grow-1">
+              <input type="radio" class="btn-check" name="isFirstTime" id="noFirstTime" autocomplete="off" checked>
+              <label class="btn btn__radio m-0 w-100" for="noFirstTime">No</label>
+            </div>
+          </div>
+        </div>
+      </form>
+    </article>
+    <!-- Footer -->
+    <footer class="d-flex justify-content-between align-items-center px-4">
+      <button type="button" class="btn btn-secondary" id="btnCancel">Cancel</button>
+      <button type="button" class="btn btn-primary m-0" id="btnSubmit">Next</button>
+    </footer>
+  </main>
+</body>
+</html>
