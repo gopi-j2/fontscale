@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="format-detection" content="telephone=no">
   <meta name="msapplication-tap-highlight" content="no">
-  <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>UIP Registration | Personal Details</title>
+  <title>UIP | Terms and Conditions</title>
   <link rel="stylesheet" href="global/xlib/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="global/xlib/unisys/unisys-style.min.css">
   <link rel="stylesheet" href="css/responsive.css">
@@ -16,65 +16,38 @@
 </head>
 <body>
   <main class="d-grid">
-    <!-- Header -->
     <header class="header h-auto d-flex bg-white">
       <h1 class="logo fs-0 m-0">Unisys Innovation Program</h1>
     </header>
-    <article class="content d-grid user__details">
-      <header class="content__header d-flex flex-column gap-2 justify-content-center">
-        <h2 class="content__title">Personal Details</h2>
-        <strong class="content__description">Please Provide your basic details</strong>
+    <article class="content d-grid terms-conditions">
+      <header class="content__header d-flex justify-content-center">
+        <h2 class="content__title">Terms and Conditions</h2>
       </header>
-      <img src="css/images/icons/personal_details.svg" alt="Personal Details" class="img-fluid content__thumbnail mb-3">
-      <form class="pd__form form-outline d-grid" autocomplete="off">
-        <div class="col fieldset">
-          <label for="firstName">First Name</label>
-          <input type="text" name="firstName" id="firstName" class="form-control" placeholder="Enter first name">
-        </div>
-        <div class="col fieldset">
-          <label for="lastName">Last Name</label>
-          <input type="text" name="lastName" id="lastName" class="form-control" placeholder="Enter last name">
-        </div>
-        <div class="col fieldset">
-          <label for="email">Email</label>
-          <input type="email" name="email" id="email" class="form-control" placeholder="Enter email">
-        </div>
-        <div class="col fieldset">
-          <label for="mobileNumber">Mobile Number</label>
-          <div class="d-inline-flex align-items-center gap-3">
-            <select name="telExtension" id="telExtension" class="form-select sm">
-              <option value="+91" selected>+91</option>
-              <option value="+01">+01</option>
-              <option value="+02">+02</option>
-              <option value="+03">+03</option>
-            </select>
-            <input type="tel" name="mobileNumber" id="mobileNumber" class="form-control" placeholder="Enter mobile number">
+      <section class="tc__content d-flex flex-column gap-3">
+        <p>By proceeding with this registration, you acknowledge and agree to the Terms & Conditions and provide your explicit consent for the collection, processing, storage, and use of your personal, professional, and biometric information for the purposes of registration, identity verification, security monitoring, access control, and related operational requirements. You confirm that all information provided by you is accurate, complete, and up to date to the best of your knowledge, and you agree to update such information if there are any changes.</p>
+        <p>You understand and accept that your biometric data, including facial images captured during the registration or verification process, may be used for authentication, monitoring, and fraud prevention purposes. This data will be processed using secure systems and handled in compliance with applicable data protection and privacy regulations. Your information will be stored securely and will not be shared with unauthorized third parties, except where required for operational, legal, or security reasons.</p>
+        <p>You also consent to the collection of device and logistics-related information, such as laptop or vehicle details, where applicable, to ensure safety, security, and accessibility within the premises or system. Such information will be used strictly for authorized purposes only.</p>
+        <p>By continuing, you agree to comply with all applicable policies, guidelines, and usage requirements. You acknowledge that misuse of the system or provision of false information may result in restricted access or further action as per organizational policies.</p>
+        <p>You retain the right to access or request correction of your data, subject to applicable policies. By selecting “I Agree” and proceeding further, you confirm that you have read, understood, and accepted these terms and consent to the processing of your data as described above.</p>
+        <p>You understand and accept that your biometric data, including facial images captured during the registration or verification process, may be used for authentication, monitoring, and fraud prevention purposes. This data will be processed using secure systems and handled in compliance with applicable data protection and privacy regulations. Your information will be stored securely and will not be shared with unauthorized third parties, except where required for operational, legal, or security reasons.</p>
+      </section>
+      <form class="tc__form">
+        <div class="form-group m-0 d-flex justify-content-center gap-4">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="acceptTermsConditions" id="disagreeTermsConditions" value="disagree">
+            <label class="form-check-label" for="disagreeTermsConditions" value="disagree">Disagree</label>
           </div>
-        </div>
-        <div class="col fieldset">
-          <label for="gender">Gender</label>
-          <div class="d-flex align-items-center gap-3">
-            <div class="d-inline-flex">
-              <input type="radio" class="btn-check" name="genderType" id="maleGender" autocomplete="off" checked>
-              <label class="btn btn__radio m-0" for="maleGender">Male</label>
-            </div>
-            <div class="d-inline-flex">
-              <input type="radio" class="btn-check" name="genderType" id="femaleGender" autocomplete="off">
-              <label class="btn btn__radio m-0" for="femaleGender">Female</label>
-            </div>
-            <div class="d-inline-flex">
-              <input type="radio" class="btn-check" name="genderType" id="otherGender" autocomplete="off">
-              <label class="btn btn__radio m-0" for="otherGender">Others</label>
-            </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="acceptTermsConditions" id="agreeTermsConditions" value="agree" checked>
+            <label class="form-check-label" for="agreeTermsConditions" value="agree">I Agree</label>
           </div>
         </div>
       </form>
     </article>
-    <!-- Footer -->
     <footer class="d-flex justify-content-between align-items-center px-4">
       <button type="button" class="btn btn-secondary" id="btnCancel">Cancel</button>
       <button type="button" class="btn btn-primary m-0" id="btnSubmit">Next</button>
     </footer>
   </main>
 </body>
-</html> http://localhost:5173/enroll?token=6d43d83be945321a2503da1a789ef305319eb072040f80c8b2054c877b069a7c
+</html>
