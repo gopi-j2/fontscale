@@ -4,50 +4,34 @@
   <meta charset="UTF-8">
   <meta name="format-detection" content="telephone=no">
   <meta name="msapplication-tap-highlight" content="no">
-  <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>UIP | Terms and Conditions</title>
-  <link rel="stylesheet" href="global/xlib/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="global/xlib/unisys/unisys-style.min.css">
+  <title>UIP Registration | Registration Status</title>
+  <link rel="stylesheet" href="_global/xlib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="_global/xlib/unisys/unisys-style.min.css">
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="css/app-style.css">
   <link rel="stylesheet" href="css/uipStyle.css">
-  <link rel="shortcut icon" href="global/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="_global/favicon.ico" type="image/x-icon">
 </head>
 <body>
   <main class="d-grid">
+    <!-- Header -->
     <header class="header h-auto d-flex bg-white">
       <h1 class="logo fs-0 m-0">Unisys Innovation Program</h1>
     </header>
-    <article class="content d-grid terms-conditions">
-      <header class="content__header d-flex justify-content-center">
-        <h2 class="content__title">Terms and Conditions</h2>
-      </header>
-      <section class="tc__content d-flex flex-column gap-3">
-        <p>By proceeding with this registration, you acknowledge and agree to the Terms & Conditions and provide your explicit consent for the collection, processing, storage, and use of your personal, professional, and biometric information for the purposes of registration, identity verification, security monitoring, access control, and related operational requirements. You confirm that all information provided by you is accurate, complete, and up to date to the best of your knowledge, and you agree to update such information if there are any changes.</p>
-        <p>You understand and accept that your biometric data, including facial images captured during the registration or verification process, may be used for authentication, monitoring, and fraud prevention purposes. This data will be processed using secure systems and handled in compliance with applicable data protection and privacy regulations. Your information will be stored securely and will not be shared with unauthorized third parties, except where required for operational, legal, or security reasons.</p>
-        <p>You also consent to the collection of device and logistics-related information, such as laptop or vehicle details, where applicable, to ensure safety, security, and accessibility within the premises or system. Such information will be used strictly for authorized purposes only.</p>
-        <p>By continuing, you agree to comply with all applicable policies, guidelines, and usage requirements. You acknowledge that misuse of the system or provision of false information may result in restricted access or further action as per organizational policies.</p>
-        <p>You retain the right to access or request correction of your data, subject to applicable policies. By selecting “I Agree” and proceeding further, you confirm that you have read, understood, and accepted these terms and consent to the processing of your data as described above.</p>
-        <p>You understand and accept that your biometric data, including facial images captured during the registration or verification process, may be used for authentication, monitoring, and fraud prevention purposes. This data will be processed using secure systems and handled in compliance with applicable data protection and privacy regulations. Your information will be stored securely and will not be shared with unauthorized third parties, except where required for operational, legal, or security reasons.</p>
+    <article class="content d-grid position-relative reg__status">
+      <section class="status__bg d-flex justify-content-center">
+        <img src="css/images/icons/reg__success.svg" alt="Registration Success" class="img-fluid">
       </section>
-      <form class="tc__form">
-        <div class="form-group m-0 d-flex justify-content-center gap-4">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="acceptTermsConditions" id="disagreeTermsConditions" value="disagree">
-            <label class="form-check-label" for="disagreeTermsConditions" value="disagree">Disagree</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="acceptTermsConditions" id="agreeTermsConditions" value="agree" checked>
-            <label class="form-check-label" for="agreeTermsConditions" value="agree">I Agree</label>
-          </div>
-        </div>
-      </form>
+      <section class="status__msg d-flex flex-column">
+        <strong>Registration Successful!</strong>
+        <span>You are successfully registered for the program</span>
+      </section>
+      <section class="status__qr">
+        <img src="css/images/icons/status_qr.svg" alt="Status Qr" class="img-fluid">
+      </section>
     </article>
-    <footer class="d-flex justify-content-between align-items-center px-4">
-      <button type="button" class="btn btn-secondary" id="btnCancel">Cancel</button>
-      <button type="button" class="btn btn-primary m-0" id="btnSubmit">Next</button>
-    </footer>
   </main>
 </body>
 </html>
